@@ -3,6 +3,7 @@ import logging
 import sys
 
 from ejemplo_setuptools_tox import __version__
+from ejemplo_setuptools_tox.fib_model import fib
 
 __author__ = "Franco Leonardo Bulgarelli"
 __copyright__ = "Franco Leonardo Bulgarelli"
@@ -10,15 +11,7 @@ __license__ = "MIT"
 
 _logger = logging.getLogger(__name__)
 
-
-def fib(n):
-    assert n > 0
-    a, b = 1, 1
-    for i in range(n - 1):
-        a, b = b, a + b
-    return a
-
-
+# controlador
 def parse_args(args):
     parser = argparse.ArgumentParser(description="Just a Fibonacci demonstration")
     parser.add_argument(
@@ -53,6 +46,7 @@ def setup_logging(loglevel):
     )
 
 
+# vista
 def main(args):
     args = parse_args(args)
     setup_logging(args.loglevel)
