@@ -1,6 +1,6 @@
 import pytest
 
-from ejemplo_setuptools_tox.skeleton import fib, main
+from ejemplo_setuptools_tox.fib import fib, main
 
 __author__ = "Franco Leonardo Bulgarelli"
 __copyright__ = "Franco Leonardo Bulgarelli"
